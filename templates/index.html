@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Insurance fraud claim detection</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='attrition-favicon.png') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Insurance Fraud Claim Detection</span></h2>
+            <div class='description'>
+    			<br><p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+
+				<input class="form-input" type="text" name="policy_annual_premium" placeholder="Policy Annual Premium [400-2000]"><br>
+				
+				<select class="form-select" name="incident_severity">
+					<option value="13">Incident Severity</option>
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</select>
+				<br>
+			
+				<select class="form-select" name="number_of_vehicles_involved">
+				<option value="13">Number of vehicles involved</option>
+				<option value="0">1</option>
+				<option value="1">2</option>
+				<option value="2">3</option>
+				<option value="3">4</option>
+				</select>
+				<br>
+			
+				<select class="form-select" name="bodily_injuries">
+					<option value="13">Bodily Injuries</option>
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+				</select>
+				<br>
+			
+				<input class="form-input" type="text" name="total_claim_amount" placeholder="Total Claim Amount [100-115000]"><br>
+				
+				<input class="form-input" type="text" name="injury_claim" placeholder="Injury Claim [0-21500]"><br>
+				
+				<input class="form-input" type="text" name="property_claim" placeholder="Property Claim [0-24000]"><br>
+				
+				<input class="form-input" type="text" name="vehicle_claim" placeholder="Vehicle Claim [0-80000]"><br>
+				
+				<input class="form-input" type="text" name="policy_bind_year" placeholder="Policy Bind Year [1990-2015]"><br>
+				
+				<select class="form-select" name="authorities_contacted">
+				<option value="10">Authorities contacted</option>
+				<option value="1">Police</option>
+				<option value="2">Fire</option>
+				<option value="3">Other</option>
+				<option value="4">Ambulance</option>
+				<option value="5">None</option>
+				</select>
+				<br>
+			
+				<select class="form-select" name="property_damage">
+				<option value="16">Property Damage</option>
+				<option value="1">Yes</option>
+				<option value="0">No</option>
+				<option value="2">No information</option>
+				</select>
+				<br>
+			
+				<select class="form-select"  name="incident_type">
+				<option value="10">Incident Type</option>
+				<option value="1">Multi-vehicle Collision</option>
+				<option value="2">Single Vehicle Collision</option>
+				<option value="3">Vehicle Theft</option>
+				<option value="4">Parked Car</option>
+				</select>
+				<br>
+			
+				<select class="form-select" name="insured_hobbies">
+				<option value="100">Insured Hobbies</option>
+				<option value="1">Reading</option>
+				<option value="2">Paintball</option>
+				<option value="3">Exercise</option>
+				<option value="4">Bungie-jumping</option>
+				<option value="5">Camping</option>
+				<option value="6">Movies</option>
+				<option value="7">Golf</option>
+				<option value="8">Kayaking</option>
+				<option value="9">Yachting</option>
+				<option value="10">Hiking</option>
+				<option value="11">Video-games</option>
+				<option value="12">Base-jumping</option>
+				<option value="13">Skydiving</option>
+				<option value="14">Board-games</option>
+				<option value="15">Polo</option>
+				<option value="16">Chess</option>
+				<option value="17">Dancing</option>
+				<option value="18">Sleeping</option>
+				<option value="19">Cross-fit</option>
+				<option value="20">Basketball</option>
+				</select>
+				<br>
+			
+				<select class="form-select" name="police_report_available">
+				<option value="16">Police Report Available</option>
+				<option value="1">Yes</option>
+				<option value="0">No</option>
+				<option value="2">No information</option>
+				</select>
+				<br>
+
+
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+
+        <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://github.com/bobbygajbhiye"><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://www.linkedin.com/in/bobby-gajbhiye-17692a101/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'>Made by Bobby Gajbhiye</p>
+       </div>
+
+    </body>
+</html>
